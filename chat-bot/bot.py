@@ -18,6 +18,7 @@ from plugins.basiclogs import BasicLogs
 #from plugins.changelog import ChangeLog
 from plugins.asciiwelcome import AsciiWelcome
 from plugins.mee6game import Mee6Game
+from plugins._8ball import _8ball
 
 token = os.getenv('MEE6_TOKEN')
 redis_url = os.getenv('REDIS_URL')
@@ -36,3 +37,4 @@ bot = Mee6(shard_id=int(shard), shard_count=int(shard_count), redis_url=redis_ur
            mongo_url=mongo_url, dd_agent_url=dd_agent_url,
            sentry_dsn=sentry_dsn)
 bot.run(token)
+client.run(token)
